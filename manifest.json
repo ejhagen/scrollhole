@@ -16,7 +16,7 @@
     "description": "Ever fall into a 'scroll hole'? This app helps you take control of your internet usage by asking you to confirm every fifteen whether you'd like to stay on Youtube, Twitter, or any other dopamine trap. This app guards your freedom to continue browsing, while offering the opportunity to stop if you wish.",
     "content_scripts": [
         {
-            "matches": ["https://www.youtube.com/", "https://twitter.com/", "https://www.instagram.com/", "https://www.facebook.com/", "https://www.reddit.com/"],
+            "matches": ["https://www.youtube.com/*", "https://.twitter.com/*", "https://www.instagram.com/*", "https://www.facebook.com/*", "https://www.reddit.com/*"],
             "js": ["./main.js"],
             "css": ["./style.css"]
         }
