@@ -1,4 +1,4 @@
-/* Modal code adapted from W3C */
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Nunito:wght@700&family=Poppins:wght@300;400&family=Secular+One&display=swap');
 
 /* The Modal (background) */
 .modal {
@@ -26,4 +26,123 @@
 
     grid-row: 2/3;
     grid-column: 2/3;
+
+    color: black;
+    font-family: 'Poppins', sans-serif;
+
+    border-radius: 7px;
+
+    position: relative;
+}
+
+.modal-content * {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.modal-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.modal-content a:visited {
+    color: white;
+}
+
+.modal-content a:hover {
+    text-decoration: none;
+}
+
+.modal-content h1 {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin: 52px;
+}
+
+.instructions {
+    text-align: center;
+}
+
+.instructions p {
+    margin: 8px;
+}
+
+.quote-box {
+    text-align: center;
+    background-color: #1B1B1B;
+    color: white;
+    padding: 16px;
+    margin-top: 42px;
+
+    /* make text unselectable */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+.quote {
+    font-style: italic;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 32px;
+}
+
+.type-here {
+    background-color: white;
+    outline: 1px solid black;
+    border: none;
+    border-radius: 5px;
+    height: 32px;
+    width: 460px;
+    color: black;
+    /* margin: 16px 4px 0 40px; */
+    padding-left: 8px;
+}
+
+.continue-btn {
+    background: rgba(96, 217, 23);
+    color: white;
+    border-radius: 5px;
+    padding: 8px 36px;
+    outline: 1px solid black;
+    border: none;
+}
+
+.continue-btn:hover {
+    opacity: 90%;
+}
+
+.close-tab {
+    background: rgba(37, 70, 246);
+    color: white;
+    outline: 1px solid black;
+    width: 600px;
+    padding: 10px;
+    margin: 32px auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close-tab span {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.close-tab:hover {
+    opacity: 90%;
 }
