@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Exit the scroll hole",
+    "version": "1.0",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "description": "Ever fall into a 'scroll hole'? This app helps you take control of your internet usage by asking you to confirm every fifteen whether you'd like to stay on Youtube, Twitter, or any other dopamine trap. This app guards your freedom to continue browsing, while offering the opportunity to stop if you wish.",
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/", "https://twitter.com/home?lang=en", "https://www.instagram.com/?hl=en", "https://www.facebook.com/", "https://www.reddit.com/"],
+            "js": ["./main.js"],
+            "css": ["./style.css"]
+        }
+    ]
+}
