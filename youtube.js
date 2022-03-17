@@ -1,7 +1,6 @@
-// document.addEventListener('DOMContentLoaded', () => {
-// display message after 15 minutes
-setTimeout(() => {
+init();
 
+function init() {
     const modal = document.createElement('div');
     modal.setAttribute('class', 'modal');
     const modalContent = document.createElement('div');
@@ -10,7 +9,7 @@ setTimeout(() => {
     // creating the modal
     const banner = document.createElement('h1');
     banner.setAttribute('class', 'banner');
-    banner.innerText = "You've been here for a while!";
+    banner.innerText = "Take a deep breath!";
     modalContent.appendChild(banner);
     
     const instructions = document.createElement('div');
@@ -51,12 +50,10 @@ setTimeout(() => {
     
     document.querySelector('body').appendChild(modal).appendChild(modalContent);
     
-    // get inspirational quote
-    fetch("https://zenquotes.io/api/quotes", {
-        mode: 'no-cors'
-    })
-        .then(data => data.json())
-        .then(data => console.log(data));
+    // // get inspirational quote
+    // fetch("https://zenquotes.io/api/today ")
+    // .then(data => data.json())
+    // .then(data => console.log(data));
     
     // check if quotation typed in correctly
     continueBtn.addEventListener('click', () => {
@@ -67,8 +64,6 @@ setTimeout(() => {
             console.log('modal hidden');
         }
     });
-}, (15 * 60 * 1000)); // 15 min * 60 seconds/min * 1000 ms/sec
-
-
-
-// })
+}
+    
+document.addEventListener("pjax:end", init);
